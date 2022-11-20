@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            {{ title|capfirst }}
+        {% endblock %}
+    </title>
+
+    {% block css %}
+        <link rel="stylesheet" type="text/css"
+              href="{% static 'css/style.css' %}">
+        {#        <link rel="shortcut icon" type="image/png"#}
+        {#              href="{% static "img/icon.svg" %}">#}
+    {% endblock %}
+
+    {% block js %}
+        <script src="{% static 'js/modal_window.js' %}"></script>
+    {% endblock %}
+</head>
+<body>
+
+{% block header %}
+    {% include 'main_app/includes/header.html' %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+    {% include 'main_app/includes/footer.html' %}
+{% endblock %}
+
+</body>
+</html>

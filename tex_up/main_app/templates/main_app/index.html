@@ -1,0 +1,180 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="content">
+
+        <div class="content_form">
+            <div class="content_form_table">
+                <form class="content_form_form" action="">
+                    <div class="content_form_close_string">
+                        <div class="content_form_close" onclick="openWindow()"></div>
+                    </div>
+                    <div class="content_modal_title">
+                        <p>Заказать обратный звонок</p>
+                    </div>
+                    <div class="content_modal_desc">
+                        <p>
+                            Заполните форму и мы
+                            перезвоним в течении 15 минут
+                        </p>
+                    </div>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="content_button_send_div">
+                        <button class="content_button_send" type="submit">
+                            Отправить заявку
+                        </button>
+                    </div>
+                    <div class="content_footer">
+                        <p>Нажимая на кнопку “Отправить заявку”, Вы даёте
+                            своё согласие на обработку персональных данных</p>
+                        <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="content_text">
+            <div class="content_text_1">
+                <ul>
+                    <li><p>Выезд мастера БЕСПЛАТНО</p></li>
+                    <li><p>Консультация по телефону БЕСПЛАТНО</p></li>
+                    <li><p>Ремонт Компьютеров и Ноутбуков</p></li>
+                    <li><p>Ремонт Смартфонов Android и IOS</p></li>
+                    <li><p>Ремонт Кофемашин</p></li>
+                    <li><p>Ремонт Телевизоров</p></li>
+                </ul>
+            </div>
+            <div class="content_text_2">
+                <p>
+                    Жизнь современного человека невозможно представить без
+                    электроники, и ее выход из строя очень часто чреват не
+                    только личными неудобствами, но и материальными потерями.
+                    Сервисный центр «Тех-UP» гарантирует выполнение услуг на
+                    высоком профессиональном уровне и точно в оговоренные
+                    сроки. При этом стоимость работ всегда остается максимально
+                    доступной и объективной, ведь наш приоритет –
+                    высококачественный сервис и доверие клиентов.
+                </p>
+            </div>
+        </div>
+        <div class="content_ads">
+            <div class="content_ads_text">
+                <p>Гарантия качества на работы</p>
+            </div>
+            <div class="content_ads_text">
+                <p>Работаем с юр. и физ. лицами</p>
+            </div>
+            <div class="content_ads_text">
+                <p>Ремонт любой сложности</p>
+            </div>
+            <div class="content_ads_text content_ads_text_price">
+                <p>Доступные цены</p>
+            </div>
+        </div>
+        <div class="content_price_table">
+            <div class="content_price">
+                <h1>Цены на некоторые ремонтные услуги:</h1>
+                <hr>
+                <div class="content_price_text_price">
+                    <div class="content_price_text">
+                        <p>Предустановка Windows</p>
+                        <p> от 850 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Восстановление ОС Windows</p>
+                        <p> от 1120 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Работа с жёсткими дисками и информацией</p>
+                        <p> от 580 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Работа с интернетом и сетями</p>
+                        <p> от 850 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Удаление вирусов и настройка безопасности</p>
+                        <p> от 650 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Установка матрицы</p>
+                        <p> от 850 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Замена жёсткого диска</p>
+                        <p> от 450 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Замена клавиатуры</p>
+                        <p> от 1450 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Техническая чистка ноутбука</p>
+                        <p> от 1750 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Работа с macOS</p>
+                        <p> от 1850 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Комплексная сборка ПК</p>
+                        <p> от 2450 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Замена экрана Apple</p>
+                        <p> от 680 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Замена аккумулятора Apple</p>
+                        <p> от 680 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Замена экрана Android</p>
+                        <p> от 850 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Замена аккумулятора Android</p>
+                        <p> от 650 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Декальцинация</p>
+                        <p> от 900 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Замена помпы</p>
+                        <p> от 1450 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Замена шлангов</p>
+                        <p> от 1400 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Замена насоса</p>
+                        <p> от 900 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Замена уплотнительных колец</p>
+                        <p> от 800 руб.</p>
+                    </div>
+                    <div class="content_price_text">
+                        <p>Чистка или ремонт заварочного блога</p>
+                        <p> от 700 руб.</p>
+                    </div>
+                </div>
+                <div class="header_button content_button">
+                    <button class="header_button_master"
+                            onclick="openWindow()">
+                        Вызвать мастера
+                    </button>
+                    <p>Или позвоните по телефону</p>
+                    <a href="tel:+79300715225">+79300715225</a>
+                </div>
+                <br>
+            </div>
+        </div>
+        <br>
+    </div>
+{% endblock %}

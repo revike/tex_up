@@ -8,7 +8,7 @@ class Client(models.Model):
                                   verbose_name='имя')
     phone_number_regex = RegexValidator(regex=r"^\+1?\d{11,11}$")
     phone = models.CharField(validators=[phone_number_regex], max_length=16,
-                             unique=True, blank=False, verbose_name='телефон')
+                             unique=False, blank=False, verbose_name='телефон')
 
     def __str__(self):
         return self.first_name

@@ -133,3 +133,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ADMIN_LOGIN = env('ADMIN_LOGIN')
 ADMIN_EMAIL = env('ADMIN_EMAIL')
 ADMIN_PASSWORD = env('ADMIN_PASSWORD')
+
+# Email
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+
+# EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_FILE_PATH = 'tmp/emails/'

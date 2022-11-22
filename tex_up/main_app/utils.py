@@ -1,10 +1,10 @@
 from django.core.mail import send_mail
 
-from tex_up import settings
+from tex_up.settings import EMAIL_HOST_USER, EMAIL_SEND
 
 
 def send_mail_client(client):
-    subject = f'{client}'
-    message = f''
-    return send_mail(subject, message, settings.EMAIL_HOST_USER,
-                     [settings.EMAIL_HOST_USER], fail_silently=False)
+    subject = f'Новая заявка'
+    message = f'Имя: {client["first_name"]}\nТелефон: {client["phone"]}'
+    return send_mail(subject, message, EMAIL_HOST_USER,
+                     EMAIL_SEND, fail_silently=False)
